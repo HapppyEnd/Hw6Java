@@ -2,7 +2,6 @@ package Hw6Java;
 
 import java.util.ArrayList;
 import java.util.List;
-import Hw6Java.Cat;
 
 public class Homework {
 
