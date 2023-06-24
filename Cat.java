@@ -15,26 +15,21 @@ public class Cat {
     }
 
     public Cat() {
-        this.name = "Street cat";
-        this.appetite = 100;
-        this.satiety = 0;
+        this("Street cat");
     }
 
     public Cat(String name) {
-        this.name = name;
-        this.appetite = 100;
-        this.satiety = 0;
+        this(name, 100);
     }
 
     public Cat(String name, int appetite) {
-        this.name = name;
-        this.appetite = appetite;
-        this.satiety = 0;
+        this(name, appetite, 0);
     }
 
     public String getName() {
         return name;
     }
+
     public Double getSatiety() {
         return satiety;
     }
@@ -45,9 +40,7 @@ public class Cat {
         if (howMuchEat == eatTillFull) {
             this.satiety = 100;
         } else {
-            this.satiety = (
-                this.appetite - eatTillFull + howMuchEat) / (
-                this.appetite / 100);
+            this.satiety = (this.appetite - eatTillFull + howMuchEat) / (this.appetite / 100);
         }
     }
 
